@@ -1,0 +1,535 @@
+﻿1. What is difference between JDK,JRE and JVM?
+
+JVM.
+
+JVM is an acronym for Java Virtual Machine, it is an abstract machine which provides the run-time environment, in which java byte-code can be executed.
+
+JVMs are available for many hardware and software platforms. (so JVM is platform dependent).
+
+JRE.
+
+JRE stands for Java Run-time Environment. It is the implementation of JVM. and physically exists.
+
+JDK.
+
+JDK is an acronym for Java Development Kit. It physically exists. It contains JRE + development tools.
+
+2. How many types of memory areas are allocated by JVM.
+
+Many types.
+
+    Class(Method) Area.
+    Heap.
+    Stack.
+    Program Counter Register.
+    Native Method Stack.
+
+3. What is platform.
+
+A platform is basically the hardware, or software environment, in which a program runs. There are two types of platforms, software-based and hardware-based. Java provides software-based platform.
+
+4. What is the main difference between Java platform, and other platforms.
+
+The Java platform differs from most other platforms, in the sense that. it's a software-based platform, that runs on top of other hardware-based platforms.It has two components.
+
+    Runtime Environment.
+    API(Application Programming Interface).
+
+5. What gives Java its, 'write once and run anywhere', nature
+
+The byte-code. Java is compiled to be a byte code, which is the intermediate language, between source code and machine code. This byte code is not platform specific, and hence can be fed to any platform.
+
+6. What is class-loader
+
+The class-loader is a subsystem of JVM, that is used to load classes and interfaces.
+
+7. What is the default value of the local variables.
+
+The local variables are not initialized to any default value, neither primitives nor object references. 
+
+8. What is difference, between object oriented programming language, and object based programming language.
+
+Object based programming languages follow all the features of OOPs, except Inheritance. Examples of object based programming languages, are JavaScript.
+
+9. Is constructor inherited.
+
+No, constructor is not inherited.
+
+10. Can you make a constructor final?
+
+No, constructor can't be final.
+
+
+11. What is static variable?
+
+a. static variable is used to, refer the common property of all objects, (that is not unique for each object) e.g. company name of employees, college name of students etc.
+
+b. static variable, gets memory only once, in class area at the time of class loading.
+
+12. What is static method?
+
+    a. A static method belongs to the class rather than object of a class.
+    b. A static method can be, invoked without the need for creating an instance of a class.
+    c. static method can access static data member, and can change the value of it.
+
+13. What is static block?
+
+    a. Is used to initialize the static data member.
+    b. It is executed before main method at the time of class-loading.
+
+14. Can we execute a program without main() method?
+
+    Yes, one of the way is static block.
+
+15. What is difference between static (class) method, and instance method?
+
+    A. static or class method.
+
+       a. A method i.e. declared as static is known as static method.
+       b. Object is not required to call static method.
+       c. Non-static (instance) members, cannot be accessed in static context, (static method, static block and static nested class) directly.
+
+    B. instance method.
+
+       a. A method i.e. not declared as static is known as instance method.
+       b. Object is required to call instance methods.
+       c. static and non-static variables both, can be accessed in instance methods.
+
+16. What is Inheritance?
+
+    Inheritance is a mechanism, in which one object acquires all the properties and behavior of another object, of another class. It represents IS-A relationship. It is used for Code Re-usability and Method Overriding.
+       
+17. Why multiple inheritance is not supported in java?
+
+    To reduce the complexity and simplify the language, multiple inheritance is not supported in java in case of class.
+
+18. What is method overloading?
+
+    If a class have multiple methods, by same name, but different parameters, it is known as Method Overloading. It increases the readability of the program.
+
+19. Can we overload main() method?
+
+    Yes, You can have many main() methods in a class by overloading the main method.
+
+20. What is method overriding?
+
+    If a subclass provides a specific implementation of a method, that is already provided by its parent class, it is known as Method Overriding. It is used for run-time polymorphism, and to provide the specific implementation of the method.
+
+21. Why we cannot override static method ?
+
+	Overriding depends on having an instance of a class.
+	Static method is not associated with any instance of a class, It is a part of class, and it is bound with class. so the concept is not applicable.
+	
+	
+22. Difference between method Overloading and Overriding ?
+
+A. Method Overloading
+
+	1. Method overloading increases the readability of the program.
+	2. method overlaoding is occurs within the class.
+	3. In this case, parameter must be different.
+
+B. Method Overriding
+	1. Method overriding provides the specific implementation of the method, that is already provided by its super class.
+	2. Method overriding occurs in two classes, that have IS-A relationship.
+	3. In this case, parameter must be same.
+
+23. What is final variable ?
+	If you make any variable as final, you cannot change the value of final variable. (It will be constant).
+
+24. What is final method ?
+	Final methods can't be overriden.
+
+25. What is final class ?
+	Final class can't be inherited.
+
+26. What is abstraction ?
+	Abstraction is a process of, hiding the implementation details, and showing only functionality to the user.
+	Abstraction lets you focus on, what the object does, instead of how it does it. 
+
+27. What is the difference between abstraction and encapsulation ?
+	Abstraction hides the implementation details whereas, encapsulation wraps code and data into a single unit.
+
+28. What is abstract class ?
+	A class that is declared as abstract is known as abstract class.
+	It needs to be extended and its method implemented. 
+	It cannot be instantiated.
+
+29. Can there be any abstract method without abstract class ?
+	No, if there is any abstract method in a class, that class must be abstract.
+
+30. Can you use abstract and final both with a method ?
+	No, because abstract method needs to be overridden, whereas you can't override final method.
+
+31. What is interface ?
+	Interface is a blueprint of a class, that have static constants and abstract methods.
+	It can be used to achieve fully abstraction, and multiple inheritance.
+32. Can you declare an interface method static?
+	No, because methods of an interface is abstract by default, and static and abstract keywords can't be used together. 
+33. What is difference between abstract class and interface?
+	Abstract class.
+		1. An abstract class can have method body (non-abstract methods).
+		2. You can extends one abstract class.
+		3. An abstract class can have instance variables.
+		4. An abstract class can have constructor.
+		5. An abstract class can have static methods.
+	Interface.
+		1. Interface have only abstract methods.
+		2. You can implement multiple interfaces.
+		3. An interface cannot have instance variables.
+		4. Interface cannot have constructor.
+		5. Interface cannot have static methods.
+34. Can we define private and protected modifiers for variables in interfaces ?
+	No, they are implicitly public.
+35. What is Exception Handling ?
+	Exception Handling is a mechanism to handle runtime errors.
+	It is mainly used to handle checked exceptions.
+36. What is difference between Checked Exception and Unchecked Exception ?
+	1. Checked Exception.
+		The classes that extend Throwable class, except RuntimeException and Error, are known as checked exceptions. 
+		For example: IOException,SQLException etc. 
+		Checked exceptions are checked at compile-time. 
+	2. Unchecked Exception:
+		The classes that extend RuntimeException are known as unchecked exceptions.
+		For example: ArithmeticException,NullPointerException etc. 
+		Unchecked exceptions are not checked at compile-time.
+37. What is the exceptionHandling with MethodOverriding ?
+	if the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception, but it can declare unchecked exception.  
+	If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception, but cannot declare parent exception. 
+38. What is exception propagation ?
+	Forwarding the exception object to the invoking method, is known as exception propagation.
+39. What is the meaning of immutable in terms of String?
+	The simple meaning of immutable is unmodifiable or unchangeable. 
+	Once string object has been created, its value can't be changed.
+40. What is the basic difference between string and stringbuffer object?
+	String is an immutable object. StringBuffer is a mutable object.
+41. What is the difference between StringBuffer and StringBuilder ?
+	StringBuffer is synchronized whereas StringBuilder is not synchronized.
+42. What is Garbage Collection ?
+	Garbage collection is a process of reclaiming the runtime unused objects.
+	It is performed for memory management.
+43. What is the purpose of finalize() method ?
+	Finalize() method is invoked just before the object is garbage collected.
+	It is used to perform cleanup processing.
+44. What is the purpose of the Runtime class ?
+	The purpose of the Runtime class, is to provide access to the Java runtime system.
+45. What is the difference between the Reader and Writer class hierarchy, and the InputStream and OutputStream class hierarchy ?
+	The Reader and Writer class hierarchy is character-oriented, but the InputStream and OutputStream class hierarchy is byte-oriented.
+46. What is serialization ?
+	Serialization is a process of writing the state of an object, into a byte stream.
+	It is mainly used to travel object's state on the network. 
+47. What is transient keyword ?
+	If you define any data member as transient,it will not be serialized.
+48. What is Externalizable ?
+	Externalizable interface is used to write the state of an object, into a byte stream in compressed format.
+	It is not a marker interface.
+49. What is the difference between Serializalble and Externalizable interface?
+	Serializable is a marker interface but Externalizable is not a marker interface.
+	When you use Serializable interface, your class is serialized automatically by default. But you can override writeObject() and readObject(). two methods to control more complex object serailization process. 
+	When you use Externalizable interface, you have a complete control over your class's serialization process.
+50. How do I convert a numeric IP address like 192.18.97.39 into a hostname like java.sun.com? 
+	By InetAddress.getByName("192.18.97.39").getHostName() where 192.18.97.39 is the IP address.
+51. What is Aggregation ?
+	If a class have an entity reference, it is known as Aggregation. 
+	Aggregation represents HAS-A relationship.	
+52. What is reflection?
+	Reflection is the process of, examining or modifying the runtime behaviour, of a class at runtime.
+		It is used in: 
+			
+    			- IDE (Integreted Development Environment) e.g. Eclipse, MyEclipse, NetBeans.
+    			- Debugger
+    			- Test Tools etc.
+53. What is a native method?
+	A native method is a method that is implemented in a language other than Java.
+54. What is singleton class?
+	Singleton class means that any given time only one instance of the class is present, in one JVM.
+55. What is Locale? 
+	A Locale object represents a specific geographical, political, or cultural region.
+56. How will you load a specific locale? 
+	ResourceBundle bundle = ResourceBundle.getBundle("MessageBundle", Locale.US);  
+  	System.out.println("Message in "+Locale.US +":"+bundle.getString("greeting"));  
+57. What is a JavaBean?
+    	It should have a no-arg constructor.
+    	It should be Serializable.
+    	It should provide methods to set and get the values of the properties, known as getter and setter methods.
+	
+58. What is multithreading?
+	Multithreading is a process of executing multiple threads simultaneously.
+	Its main advantage is: 
+		1. Threads share the same address space.
+		2. Thread is lightweight.
+		3. Cost of communication between process is low.
+59. What is difference between wait() and sleep() method?
+	wait().
+		The wait() method is defined in Object class.
+		wait() method releases the lock.
+	sleep().
+		The sleep() method is defined in Thread class.
+		The sleep() method doesn't releases the lock.
+60. What about the daemon threads?
+	The daemon threads are basically the low priority threads, that provides the background support to the user threads. 
+	It provides services to the user threads.
+61. Is it possible to start a thread twice?
+	No, there is no possibility to start a thread twice. 
+	If we does, it throws an exception.
+62. Can we call the run() method instead of start()?
+	yes, but it will not work as a thread rather it will work as a normal object. so there will not be context-switching between the threads.
+63. What is shutdown hook?
+	The shutdown hook is basically a thread i.e. invoked implicitely before JVM shuts down. So we can use it perform clean up resource.
+64. What is synchronization?
+	Synchronization is the capabilility of ,control the access of multiple threads, to any shared resource.It is used:
+    		1. To prevent thread interference.
+    		2. To prevent consistency problem.
+65. What is the purpose of Synchronized block?
+    	Synchronized block is used to ,lock an object, for any shared resource.
+    	Scope of synchronized block is ,smaller than the method.
+66. What is deadlock?
+	Deadlock is a situation when ,two threads are waiting on each other to release a resource. 
+	Each thread waiting for a resource which is held by the other waiting thread.
+67. What is the difference between ArrayList and Vector?
+	A. ArrayList.
+		1. ArrayList is not synchronized.
+		2. ArrayList is not a legacy class.
+		3. ArrayList increases its size by 50% of the array size.
+	B. Vector.
+		1. Vector is synchronized.
+		2. Vector is a legacy class.
+		3. Vector increases its size by doubling the array size.
+68. What is the difference between ArrayList and LinkedList?
+	A. ArrayList.
+		1. ArrayList uses a dynamic array.
+		2. ArrayList is not efficient for manipulation because a lot of shifting is required.
+		3. ArrayList is better to store and fetch data.
+	B. LinkedList.
+		1. LinkedList uses doubly linked list.
+		2. LinkedList is efficient for manipulation.
+		3. LinkedList is better to manipulate data.
+69. What is the difference between Iterator and ListIterator?
+	A. Iterator.
+		1. Iterator traverses the elements in forward direction only.
+		2. Iterator can be used in List, Set and Queue.
+	B. ListIterator.
+		1. ListIterator traverses the elements in backward and forward directions both.
+		2. ListIterator can be used in List only.
+70. What is the difference between Iterator and Enumeration?
+	A. Iterator.
+		1. Iterator can traverse legacy and non-legacy elements.
+		2. Iterator is fail-fast.
+		3. Iterator is slower than Enumeration.
+	B. Enumeration.
+		1. Enumeration can traverse only legacy elements.
+		2. Enumeration is not fail-fast.
+		3. Enumeration is faster than Iterator.
+
+71. What is the difference between List and Set?
+	List can contain duplicate elements whereas Set contains only unique elements.
+
+72. What is the difference between HashSet and TreeSet?
+	HashSet maintains no order whereas TreeSet maintains ascending order.
+
+73. What is the difference between Set and Map?
+	Set contains values only whereas Map contains key and values both.
+
+74. What is the difference between HashSet and HashMap?
+	HashSet contains only values whereas HashMap contains entry(key,value).
+	HashMap need to convert into Set to be iterated.
+
+75. What is the difference between HashMap and TreeMap?
+	HashMap maintains no order but TreeMap maintains ascending order.
+
+76. What is the difference between HashMap and Hashtable?
+
+	A. HashMap.
+		a. HashMap is not synchronized.
+		b. HashMap can contain one null key and multiple null values.
+	B. Hashtable.
+		a. Hashtable is synchronized.
+		b. Hashtable cannot contain any null key or null value.
+
+77. What is the difference between Collection and Collections?
+	A. Collection is an interface whereas Collections is a class.
+	B. Collection interface provides normal functionality of data structure to List, Set and Queue. But, Collections class is to sort and synchronize collection elements.
+
+78. What is the difference between Comparable and Comparator?
+	A. Comparable. 
+		a. Comparable provides only one sort of sequence.
+		b. It provides one method named compareTo().
+		c. It is found in java.lang package.
+		d. If we implement Comparable interface, actual class is modified.
+	B. Comparator. 
+		a. Comparator provides multiple sort of sequences.
+		b. It provides one method named compare().
+		c. it is found in java.util package.
+		d. Actual class is not modified.
+
+79. What is the advantage of Properties file?
+	If you change the value in properties file, you don't need to recompile the java class. So, it makes the application easy to manage.
+
+80. What does the hashCode() method?
+	The hashCode() method returns a hash code value (an integer number).
+	The hashCode() method returns the same integer number, if two keys (by calling equals() method) are same.
+	But, it is possible that two hash code numbers can have different or same keys.
+	
+81. Why we override equals() method?
+	The equals method is used to check whether two objects are same or not. It needs to be overridden if we want to check the objects based on property.
+
+	For example, Employee is a class that has 3 data members: id, name and salary. But, we want to check the equality of employee object on the basis of salary. Then, we need to override the equals() method.
+
+82. What is the advantage of generic collection?
+	If we use generic class, we don't need typecasting. It is typesafe and checked at compile time.
+
+83. What is JDBC?
+	JDBC is a Java API that is used to connect and execute query to the database. 
+	JDBC API uses jdbc drivers to connects to the database.
+
+84. What is JDBC Driver?
+	JDBC Driver is a software component that enables java application to interact with the database.There are 4 types of JDBC drivers:
+
+    		JDBC-ODBC bridge driver.
+    		Native-API driver (partially java driver).
+    		Network Protocol driver (fully java driver).
+    		Thin driver (fully java driver).
+
+85. What are the steps to connect to the database in java?
+
+    	Registering the driver class.
+    	Creating connection.
+   	Creating statement.
+    	Executing queries.
+    	Closing connection.
+
+86. What are the JDBC API components?
+	The java.sql package contains interfaces and classes for JDBC API.
+
+	Interfaces:
+
+    	Connection.
+    	Statement.
+    	PreparedStatement.
+    	ResultSet.
+    	ResultSetMetaData.
+    	DatabaseMetaData.
+    	CallableStatement etc.
+
+	Classes:
+
+    	DriverManager.
+    	Blob.
+    	Clob.
+    	Types.
+    	SQLException etc.
+
+87. What are the JDBC statements?
+	There are 3 JDBC statements.
+
+    		Statement.
+    		PreparedStatement.
+    		CallableStatement.
+
+88. What is the difference between Statement and PreparedStatement interface?
+
+	In case of Statement, query is complied each time whereas in case of PreparedStatement, query is complied only once. 
+	So performance of PreparedStatement is better than Statement.
+
+89. How can we execute stored procedures and functions?
+	By using Callable statement interface, we can execute procedures and functions.
+
+90. What is the role of JDBC DriverManager class?
+	The DriverManager class manages the registered drivers. 
+	It can be used to register and unregister drivers. 
+	It provides factory method that returns the instance of Connection.
+
+91. What does the JDBC Connection interface?
+	The Connection interface maintains a session with the database. 
+	It can be used for transaction management. 
+	It provides factory methods that returns the instance of Statement, PreparedStatement, CallableStatement and DatabaseMetaData.
+
+92. What does the JDBC ResultSet interface?
+	The ResultSet object represents a row of a table. 
+	It can be used to change the cursor pointer and get the information from the database.
+
+93. What does the JDBC ResultSetMetaData interface?
+	The ResultSetMetaData interface returns the information of table such as total number of columns, column name, column type etc.
+
+94. What does the JDBC DatabaseMetaData interface?
+	The DatabaseMetaData interface returns the information of the database such as username, driver name, driver version, number of tables, number of views etc.
+
+95. Which interface is responsible for transaction management in JDBC?
+	The Connection interface provides methods for transaction management such as commit(), rollback() etc.
+
+96. What is batch processing and how to perform batch processing in JDBC?
+	By using batch processing technique in JDBC, we can execute multiple queries. It makes the performance fast.
+
+97. How can we store and retrieve images from the database?
+	By using PreparedStaement interface, we can store and retrieve images.
+
+--------------SPRING------------------
+
+98. What is Spring?
+	It is a lightweight, loosely coupled and integrated framework for developing enterprise applications in java.
+
+99. What are the advantages of spring framework?
+	
+    1. Predefined Templates
+    2. Loose Coupling
+    3. Easy to test
+    4. Lightweight
+    5. Fast Development
+    6. Powerful Abstraction
+    7. Declarative support
+
+100. What are the modules of spring framework?
+
+    1. Test
+    2. Spring Core Container
+    3. AOP, Aspects and Instrumentation
+    4. Data Access/Integration
+    5. Web
+
+101. What is IOC and DI?
+	IOC (Inversion of Control) and DI (Dependency Injection) is a design pattern to provide loose coupling. It removes the dependency from the program.
+
+102. What is the role of IOC container in spring?
+	IOC container is responsible to:
+    		1. create the instance
+    		2. configure the instance, and
+    		3. assemble the dependencies
+
+103. What are the types of IOC container in spring?
+	There are two types of IOC containers in spring framework.
+
+    		1. BeanFactory
+    		2. ApplicationContext
+
+104. What is the difference between BeanFactory and ApplicationContext?
+	BeanFactory is the basic container whereas ApplicationContext is the advanced container. 
+	ApplicationContext extends the BeanFactory interface. 
+	ApplicationContext provides more facilities than BeanFactory such as: integration with spring AOP, message resource handling for i18n etc.
+---------------------------
+105. What is the difference between List and Array?	
+	1. Array is a fixed length data structure while ArrayList is a variable length Collection class.
+	2. You can not use Generics along with Array while ArrayList allows you to use Generics to ensure type-safety.
+	3. You can not store primitives in ArrayList While Array can contain both primitives and Objects in Java.
+
+106. What is autowiring in spring? What are the autowiring modes?
+	Autowiring enables the programmer to inject the bean automatically. We don't need to write explicit injection logic.
+	The autowiring modes are given below:
+		1. no: this is the default mode, it means autowiring is not enabled.
+		2. byName: injects the bean based on the property name. It uses setter method.
+		3. byType: injects the bean based on the property type. It uses setter method.
+		4. constructor: It injects the bean using constructo.
+107. What are the different bean scopes in spring?
+	There are 5 bean scopes in spring framework:
+		1. singleton: The bean instance will be only once and same instance will be returned by the IOC container. It is the default scope.
+		2. prototype: The bean instance will be created each time when requested.
+		3. request: The bean instance will be created per HTTP request.
+		4. session: The bean instance will be created per HTTP session.
+		5. globalsession: The bean instance will be created per HTTP global session. It can be used in portlet context only.
+108. In which scenario, you will use singleton and prototype scope?
+	Singleton scope should be used with EJB stateless session bean and prototype scope with EJB stateful session bean.
+109. What are the transaction management supports provided by spring?
+	Spring framework provides two type of transaction management supports:
+		1. Programmatic Transaction Management: should be used for few transaction operations.
+		2. Declarative Transaction Management: should be used for many transaction operations.
+110. What are the advantages of JdbcTemplate in spring?
+	Less code: By using the JdbcTemplate class, you don't need to create connection,statement,start transaction,commit transaction and close connection to execute different queries. You can execute the query directly.
